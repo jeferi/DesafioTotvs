@@ -1,6 +1,6 @@
 # Project TOTVS
 
-Projeto Criado para desafio de automatizar o caso de teste enviado pro email. 
+Projeto criado para o desafio de teste automatizado (teste enviado por email). 
 
 
 ### Pre-requisites
