@@ -1,4 +1,4 @@
-# Project TOTSV
+# Project TOTVS
 
 Projeto Criado para desafio de automatizar o caso de teste enviado pro email. 
 
@@ -22,7 +22,7 @@ ou clicando na barra do lado esquerdo na opção Maven e clicar em Reload all Ma
 
 
 
-## Authors
+## Author
 
 * **Jefferson Oliveira** - [GitHub Jefferson](https://github.com/jeferi)
 
