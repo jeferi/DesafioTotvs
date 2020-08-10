@@ -14,11 +14,7 @@ public class TestePage extends BasePage {
 
     public static void acessarTela() {
         abrirLink("http://automationpractice.com/");
-        //aguardarElementoVisivel(By.xpath("//div//header//div//a//span[.='Entrar']"), 15);
     }
-    /*public boolean validarTela() {
-        return verificarElementoExistente("//div[@id='header_logo']//img", 60);
-    }*/
 
     private void escreverCampos(String id_campo, String texto) {
         escrever(By.xpath("//input[contains(@id,'".concat(id_campo).concat("') and @type='text']")), texto);
@@ -104,43 +100,5 @@ public class TestePage extends BasePage {
         aguardarElementoVisivel(By.xpath("//span[@class='lighter']"), 10);
         String validacao = obterTexto(By.xpath("//span[@class='lighter']"));
         Assert.assertEquals("\"BLOUSE\"", validacao);
-    }
-
-
-    public void verificarFavorito(String expectedMsg) {
-        aguardarElementoVisivel(By.xpath("//*//div[3]/a/div[2]/div[1]"), 10);
-        String msg = obterTexto(By.xpath("//*//div[3]/a/div[2]/div[1]"));
-        Assert.assertTrue(msg.contains(expectedMsg));
-    }
-
-    public void verificarUsuarioLogado(String expectedMsg) {
-        aguardarElementoVisivel(By.xpath("//div//header//div//a//span//div/span[.!='']"), 10);
-        String msg = obterTexto(By.xpath("//div//header//div//a//span//div/span[.!='']"));
-        Assert.assertTrue(msg.contains(expectedMsg));
-    }
-
-    public void verificarMensagemErroLogin(String expectedMsg) {
-        aguardarElementoVisivel(By.xpath("//*[@id]//div[3]/div/div/span"), 10);
-        String msg = obterTexto(By.xpath("//*[@id]//div[3]/div/div/span"));
-        Assert.assertTrue(msg.contains(expectedMsg));
-    }
-
-    public void escreverCampoEmail(String email) {
-        escrever(By.xpath("//input[@type= 'email']"), email);
-    }
-
-
-    /*#### ABAS NAVEGADOR #####*/
-
-    public void alternarAbas(String index) {
-        alternaAbas(index, 2);
-    }
-
-    public void Screenshot() {
-        tirarScreenshot(getNavegador(), "target\\Screenshot_Evidencias\\" + horaArquivo() + "evidencia.png");
-    }
-
-    public void fecharAbaSelecionada() throws AWTException {
-        fecharAba();
     }
 }
